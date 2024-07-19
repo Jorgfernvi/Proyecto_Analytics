@@ -1,12 +1,49 @@
-# Proyecto: Forecast_Tiendas_General
+# Importancia del Forecast para Tiendas en Expansión Comercial
 
-Este proyecto se enfoca en la predicción de ventas para tiendas utilizando técnicas de análisis de series temporales y modelado predictivo. A continuación se describen las principales funcionalidades y componentes desarrollados en el notebook.
+El forecast o pronóstico de ventas es crucial para tiendas en expansión comercial por varias razones:
+
+- **Optimización de Inventarios:** Permite a las tiendas gestionar sus inventarios de manera más eficiente, evitando tanto el exceso de stock como la falta de productos.
+- **Planificación de Recursos:** Ayuda en la planificación de recursos humanos y materiales, asegurando que la tienda esté preparada para picos de demanda.
+- **Estrategia de Marketing:** Informar las estrategias de marketing basadas en las predicciones de ventas, permitiendo campañas más efectivas.
+- **Toma de Decisiones:** Facilita la toma de decisiones informadas sobre la apertura de nuevas tiendas, la expansión de líneas de productos y la inversión en infraestructura.
+
+---
+
+# Análisis de Precios
+
+Este notebook se dedica al análisis de precios utilizando técnicas de análisis de datos y visualización. A continuación se detallan las principales características y componentes desarrollados en el notebook.
 
 ## Funcionalidades Principales
 
 ### Análisis Exploratorio de Datos (EDA)
 
-- **Carga de Datos:** Importación de datos históricos de ventas.
+- **Carga de Datos:** Importación de datos de precios de diferentes productos.
+- **Visualización de Datos:** Gráficos para visualizar la distribución de precios y tendencias.
+- **Limpieza de Datos:** Manejo de valores faltantes y corrección de errores.
+
+### Análisis de Precios
+
+- **Análisis Estadístico:** Cálculo de estadísticas descriptivas para los precios.
+- **Comparación de Precios:** Comparación de precios entre diferentes tiendas o regiones.
+- **Identificación de Patrones:** Uso de clustering para identificar patrones similares.
+
+### Visualización de Resultados
+
+- **Gráficos de Comparación:** Visualización de variación de precios.
+- **Análisis de Correlación:** Gráficos de dispersión y matrices de correlación.
+- **Exportación de Resultados:** Exportación de resultados a CSV.
+
+---
+
+# Forecast para Tiendas
+
+Este notebook se enfoca en la predicción de ventas para tiendas utilizando técnicas de análisis de series temporales y modelado predictivo. A continuación se describen las principales funcionalidades y componentes desarrollados en el notebook.
+
+## Funcionalidades Principales
+
+### Análisis Exploratorio de Datos (EDA)
+
+- **Carga de Datos:** Importación de datos históricos de ventas, utilizando conexiones a BigQuery para una conexión más fluida con los datos.
 - **Visualización de Datos:** Gráficos para visualizar tendencias y patrones en los datos de ventas.
 - **Limpieza de Datos:** Manejo de valores faltantes y detección de outliers.
 
@@ -43,37 +80,10 @@ Prophet es una herramienta de modelado de series temporales desarrollada por Fac
   - Datos con tendencias de crecimiento o decrecimiento a largo plazo.
   - Series temporales con efectos de días festivos y eventos recurrentes.
 
-## Importancia del Forecast para Tiendas en Expansión Comercial
+## Resultados 
 
-El forecast o pronóstico de ventas es crucial para tiendas en expansión comercial por varias razones:
+Se encontró que el modelo Prophet es más adecuado para tiendas maduras, dado que tienen mayor historia, lo cual es coherente con lo que se menciona en la documentación de Prophet. Para tiendas nuevas, Prophet tiene un rendimiento casi nulo debido a la volatilidad de las predicciones, por lo que se recomienda utilizar otros métodos y un seguimiento más detallado para estas tiendas.
 
-- **Optimización de Inventarios:** Permite a las tiendas gestionar sus inventarios de manera más eficiente, evitando tanto el exceso de stock como la falta de productos.
-- **Planificación de Recursos:** Ayuda en la planificación de recursos humanos y materiales, asegurando que la tienda esté preparada para picos de demanda.
-- **Estrategia de Marketing:** Informar las estrategias de marketing basadas en las predicciones de ventas, permitiendo campañas más efectivas.
-- **Toma de Decisiones:** Facilita la toma de decisiones informadas sobre la apertura de nuevas tiendas, la expansión de líneas de productos y la inversión en infraestructura.
+## Entregables 
 
----
-
-# Proyecto: Analisis Precios
-
-Este proyecto se dedica al análisis de precios utilizando técnicas de análisis de datos y visualización. A continuación se detallan las principales características y componentes desarrollados en el notebook.
-
-## Funcionalidades Principales
-
-### Análisis Exploratorio de Datos (EDA)
-
-- **Carga de Datos:** Importación de datos de precios de diferentes productos.
-- **Visualización de Datos:** Gráficos para visualizar la distribución de precios y tendencias.
-- **Limpieza de Datos:** Manejo de valores faltantes y corrección de errores.
-
-### Análisis de Precios
-
-- **Análisis Estadístico:** Cálculo de estadísticas descriptivas para los precios.
-- **Comparación de Precios:** Comparación de precios entre diferentes tiendas o regiones.
-- **Identificación de Patrones:** Uso de clustering para identificar patrones similares.
-
-### Visualización de Resultados
-
-- **Gráficos de Comparación:** Visualización de variación de precios.
-- **Análisis de Correlación:** Gráficos de dispersión y matrices de correlación.
-- **Exportación de Resultados:** Exportación de resultados a CSV.
+Se desarrollaron dos dashboards: uno para la validación del modelo Prophet en tiendas nuevas y otro para el modelo aplicado a tiendas con más de un año de historia.
